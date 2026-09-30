@@ -1,0 +1,56 @@
+version: 2
+
+sources:
+  - name: odoo
+    description: "Raw data extracted from Odoo"
+    database: ODOO_DWH
+    schema: RAW
+
+    tables:
+
+      - name: res_partner
+        description: "Raw Odoo partner/customer data"
+        columns:
+          - name: id
+            description: "Odoo partner ID"
+            data_tests:
+              - not_null
+
+          - name: write_date
+            description: "Last modification timestamp in Odoo"
+            data_tests:
+              - not_null
+
+      - name: sale_order
+        description: "Raw Odoo sales order data"
+        columns:
+          - name: id
+            description: "Odoo sales order ID"
+            data_tests:
+              - not_null
+
+          - name: partner_id
+            description: "Odoo customer/partner ID"
+            data_tests:
+              - not_null
+
+          - name: write_date
+            description: "Last modification timestamp in Odoo"
+            data_tests:
+              - not_null
+
+      - name: sale_order_line
+        identifier: SALE_ORDER_LINE
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+              
+      - name: product
+        identifier: PRODUCT
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique

@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: customer_revenue
+    description: "Customer-level revenue and order metrics"
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        data_tests:
+          - not_null
+
+      - name: total_revenue
+        data_tests:
+          - not_null
+
+  - name: monthly_sales
+    description: "Monthly sales revenue and order metrics"
+    columns:
+      - name: sales_month
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        data_tests:
+          - not_null
+
+      - name: total_revenue
+        data_tests:
+          - not_null
+
+  - name: top_customers
+    description: "Customers ranked by total revenue"
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: revenue_rank
+        data_tests:
+          - not_null
+          - unique

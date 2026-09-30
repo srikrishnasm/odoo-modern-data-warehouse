@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_res_partner
+
+    columns:
+
+      - name: customer_id
+        description: "Unique Odoo customer/partner identifier"
+
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: "Customer or partner name"
+
+        data_tests:
+          - not_null

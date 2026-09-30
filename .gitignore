@@ -1,0 +1,131 @@
+# ============================================================
+# Environment & Secrets
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+secrets/
+credentials/
+service-account*.json
+
+
+# ============================================================
+# Python
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.so
+
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+
+# ============================================================
+# Virtual Environments
+# ============================================================
+
+.venv/
+venv/
+env/
+ENV/
+
+airflow_venv/
+airflow_venv*/
+
+
+# ============================================================
+# Logs
+# ============================================================
+
+*.log
+logs/
+airflow/logs/
+airflow/logs/**
+
+
+# ============================================================
+# Local Data
+# ============================================================
+
+data/raw/*
+data/checkpoints/*
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/checkpoints/.gitkeep
+
+
+# ============================================================
+# dbt
+# ============================================================
+
+dbt/**/target/
+dbt/**/dbt_packages/
+dbt/**/logs/
+dbt/**/.user.yml
+dbt/**/profiles.yml
+
+dbt/**/analyses/
+dbt/**/macros/.gitkeep
+dbt/**/seeds/
+dbt/**/snapshots/
+# ============================================================
+# Airflow
+# ============================================================
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/unittests.cfg
+airflow/webserver_config.py
+airflow/standalone_admin_password.txt
+
+
+# ============================================================
+# IDE / Editors
+# ============================================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ============================================================
+# OS
+# ============================================================
+
+.DS_Store
+Thumbs.db
+
+
+# ============================================================
+# Temporary files
+# ============================================================
+
+*.tmp
+*.temp
+*.bak
+*.backup

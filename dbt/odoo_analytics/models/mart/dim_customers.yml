@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_customers
+
+    columns:
+
+      - name: customer_id
+        description: "Unique customer identifier"
+
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: "Customer name"
+
+        data_tests:
+          - not_null

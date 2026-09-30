@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Sales transaction fact table"
+    columns:
+      - name: order_id
+        description: "Unique Odoo sales order ID"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Customer associated with the sales order"
+        data_tests:
+          - not_null
+
+      - name: amount_total
+        description: "Total sales order amount"
+        data_tests:
+          - not_null
+
+      - name: state
+        description: "Sales order status"
+        data_tests:
+          - not_null
